@@ -15,10 +15,7 @@ public class War_of_Galaxies {
         System.out.println("Hello World!");
         
         /*TO DO 
-    -Need to add Methods 
-        isSameTypeOfSoldiers
-        noSuperhumanWithChildren
-        noMarriedSuperhuman
+    
     -Add BattleSimulation Class
     -Add StatisticsManager Class?
     -Add Main Class stuff

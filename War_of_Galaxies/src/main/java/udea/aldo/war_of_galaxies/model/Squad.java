@@ -25,6 +25,26 @@ public class Squad {
     public void removeSoldier(Soldier soldier) {
         soldiers.remove(soldier);
     }
+    
+    public boolean noSuperhumanWithChildren() {
+        for (Soldier soldier : soldiers) {
+            Superhuman superhuman = soldier.getSuperhuman();
+            if (superhuman != null && superhuman.getNumberOfChildren() > 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean noMarriedSuperhuman() {
+        for (Soldier soldier : soldiers) {
+            Human human = soldier.getSuperhuman();
+            if (human != null && human.getMaritalStatus().equals("Married")) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     public String getName() {
         return name;
