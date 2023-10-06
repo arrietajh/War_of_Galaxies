@@ -26,6 +26,23 @@ public class Squad {
         soldiers.remove(soldier);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Soldier> getSoldiers() {
+        return soldiers;
+    }
+
+    public void setSoldiers(List<Soldier> soldiers) {
+        this.soldiers = soldiers;
+    }
+
+    
     // Getters and Setters (if needed)
 
     @Override
