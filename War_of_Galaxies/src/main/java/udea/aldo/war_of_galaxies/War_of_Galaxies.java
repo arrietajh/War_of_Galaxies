@@ -10,7 +10,9 @@ package udea.aldo.war_of_galaxies;
  */
 public class War_of_Galaxies {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         System.out.println("Hello World!");
+        
     }
 }

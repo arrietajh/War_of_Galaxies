@@ -20,6 +20,12 @@ public class Superhuman extends Human
         this.superpowers = new ArrayList<>();
     }
 
+    public Superhuman(int evilScore, List<String> superpowers, int id, int age, int numberOfChildren, String name, String address, String maritalStatus) {
+        super(id, age, numberOfChildren, name, address, maritalStatus);
+        this.evilScore = evilScore;
+        this.superpowers = superpowers;
+    }
+
     
 
     // Method to add a superpower
