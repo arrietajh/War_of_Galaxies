@@ -10,7 +10,6 @@ package udea.aldo.war_of_galaxies.controller;
  */
 import java.util.ArrayList;
 import java.util.List;
-import udea.aldo.war_of_galaxies.model.Soldier;
 import udea.aldo.war_of_galaxies.model.Squad;
 
 public class SquadManager {
@@ -28,13 +27,15 @@ public class SquadManager {
         // Check squad eligibility based on criteria
         // (number of soldiers, soldier types, etc.)
         int numSoldiers = squad.getSoldiers().size();
-        return numSoldiers >= 10 && numSoldiers <= 15 && squad.isSameTypeOfSoldiers();
+        return numSoldiers >= 10 && numSoldiers <= 15; //In the future, the app could allow for creating Alfi as well, we could implement a  && squad.isSameTypeOfSoldiers() method. Just a thought
     }
 
     public boolean isEligibleAsFirstSquad(Squad squad) {
         // Check eligibility as the first squad based on criteria
         // (no superhumans with children, no married superhumans, etc.)
-        return squad.noSuperhumanWithChildren() && squad.noMarriedSuperhuman();
+        
+        
+        return isEligible(squad) && squad.noSuperhumanWithChildren() && squad.noMarriedSuperhuman();
     }
     
     
