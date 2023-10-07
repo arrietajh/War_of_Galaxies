@@ -23,9 +23,9 @@ public class EnlistmentManager {
             Superhuman superhuman = (Superhuman) human;
             Soldier soldier = turnIntoSoldier(superhuman);
             enlistedSoldiers.add(soldier);
-            
         } else {
             rejectedHumans.add(human);
+            
         }
 
         if (human instanceof Superhuman) {

@@ -53,7 +53,7 @@ public class Soldier {
     public void setAlfi(Alfi alfi) {
         this.alfi = alfi;
     }
-    
+
     public String getName() {
         if (superhuman != null) {
             return superhuman.getName();
@@ -117,6 +117,20 @@ public class Soldier {
 
     public void setWisdom(int wisdom) {
         this.wisdom = wisdom;
+    }
+
+    @Override
+    public String toString() {
+        return "Soldier{"
+                + "name='" + (superhuman != null ? superhuman.getName() : alfi.getName()) + '\''
+                + ", health=" + health
+                + ", attack=" + attack
+                + ", defense=" + defense
+                + ", specialAttack=" + specialAttack
+                + ", specialDefense=" + specialDefense
+                + ", speed=" + speed
+                + ", wisdom=" + wisdom
+                + '}';
     }
 
 }
