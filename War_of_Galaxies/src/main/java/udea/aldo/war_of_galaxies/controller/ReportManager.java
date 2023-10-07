@@ -33,9 +33,8 @@ public class ReportManager {
 
         return reportBuilder.toString();
     }
-
-    public class BattleReportGenerator {
-
+    
+    
     public String generateBattleReport(List<BattleLog> battleLogs) {
         StringBuilder report = new StringBuilder("Battle Report\n\n");
 
@@ -46,7 +45,9 @@ public class ReportManager {
 
         return report.toString();
     }
-}
+
+    
+
 
     
        

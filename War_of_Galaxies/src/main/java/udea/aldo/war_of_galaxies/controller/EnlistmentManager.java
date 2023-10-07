@@ -69,7 +69,7 @@ public class EnlistmentManager {
                     soldier.setDefense(soldier.getDefense() + 18);
                     break;
                 case "Energy Projection":
-                    soldier.setSpecialAttack(soldier.getSpecialAttack() + 20);
+                    soldier.setSpecialAttack(soldier.getSpecialAttack() + 25);
                     break;
                 case "Telekinesis":
                     soldier.setSpecialAttack(soldier.getSpecialAttack() + 18);
