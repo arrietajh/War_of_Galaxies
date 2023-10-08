@@ -135,6 +135,28 @@ public class QuestionsForm extends javax.swing.JFrame {
         Powers powersForm = new Powers();
         powersForm.setVisible(true);
         WindowsManager.addWindow(powersForm);
+        
+        int puntaje = 0;
+        if ("Sí".equals(answ1.getSelectedItem().toString())) {
+            puntaje = puntaje + 1;
+        } else if ("Sí".equals(answ2.getSelectedItem().toString())){
+            puntaje = puntaje +4;
+        }else if ("Sí".equals(answ3.getSelectedItem().toString())){
+            puntaje = puntaje +3;
+        }else if ("Sí".equals(answ4.getSelectedItem().toString())){
+            puntaje = puntaje +4;
+        }else if ("Sí".equals(answ5.getSelectedItem().toString())){
+            puntaje = puntaje +2;
+        }else if ("Sí".equals(answ6.getSelectedItem().toString())){
+            puntaje = puntaje +5;
+        }else if ("Sí".equals(answ7.getSelectedItem().toString())){
+            puntaje = puntaje +6;
+        }else if ("Sí".equals(answ8.getSelectedItem().toString())){
+            puntaje = puntaje +7;
+        }
+        
+        
+        
     }//GEN-LAST:event_nextButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed

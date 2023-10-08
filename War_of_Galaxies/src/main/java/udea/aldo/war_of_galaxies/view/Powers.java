@@ -17,29 +17,7 @@ public class Powers extends javax.swing.JFrame {
      */
     public Powers() {
         initComponents();
-        //metodos para saber habilitar la opcion otro
-        power.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                if ("Otro".equals(power.getSelectedItem().toString())) {
-                    otherPw.setEnabled(true);
-                    jLabel3.setEnabled(true);
-                } else {
-                    otherPw.setEnabled(false);
-                    jLabel3.setEnabled(false);
-                }
-            }
-        });
-        otherPower.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                if ("Otro".equals(otherPower.getSelectedItem().toString())) {
-                    otherPw2.setEnabled(true);
-                    jLabel5.setEnabled(true);
-                } else {
-                    otherPw2.setEnabled(false);
-                    jLabel5.setEnabled(false);
-                }
-            }
-        });
+        
     }
 
     /**
@@ -54,12 +32,8 @@ public class Powers extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         power = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
-        otherPw = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         otherPower = new javax.swing.JComboBox<>();
-        jLabel5 = new javax.swing.JLabel();
-        otherPw2 = new javax.swing.JTextField();
         nextButton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
@@ -69,21 +43,16 @@ public class Powers extends javax.swing.JFrame {
 
         jLabel2.setText("Cual es tu superpoder principal:");
 
-        power.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vuelo", "Superfuerza", "Resistencia mejorada", "Proyección de energía", "Telequinesis", "Invisibilidad", "Teletransporte", "Regeneración", "Manipulación mental", "Control elemental (por ejemplo, fuego, agua, tierra, aire)", "Cambio de forma", "Otro" }));
-
-        jLabel3.setText("Otro:");
-        jLabel3.setEnabled(false);
-
-        otherPw.setEnabled(false);
+        power.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vuelo", "Superfuerza", "Resistencia mejorada", "Proyección de energía", "Telequinesis", "Invisibilidad", "Teletransporte", "Regeneración", "Manipulación mental", "Control elemental (por ejemplo, fuego, agua, tierra, aire)", "Cambio de forma", " " }));
+        power.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                powerActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Que otro superpoder tienes:");
 
-        otherPower.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Vuelo", "Superfuerza", "Resistencia mejorada", "Proyección de energía", "Telequinesis", "Invisibilidad", "Teletransporte", "Regeneración", "Manipulación mental", "Control elemental (por ejemplo, fuego, agua, tierra, aire)", "Cambio de forma", "Otro" }));
-
-        jLabel5.setText("Otro:");
-        jLabel5.setEnabled(false);
-
-        otherPw2.setEnabled(false);
+        otherPower.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Vuelo", "Superfuerza", "Resistencia mejorada", "Proyección de energía", "Telequinesis", "Invisibilidad", "Teletransporte", "Regeneración", "Manipulación mental", "Control elemental (por ejemplo, fuego, agua, tierra, aire)", "Cambio de forma", " " }));
 
         nextButton.setText("Siguiente");
         nextButton.addActionListener(new java.awt.event.ActionListener() {
@@ -120,20 +89,10 @@ public class Powers extends javax.swing.JFrame {
                             .addGap(13, 13, 13)
                             .addComponent(power, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(130, 130, 130)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addComponent(otherPw, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
                             .addGap(10, 10, 10)
                             .addComponent(jLabel4)
                             .addGap(22, 22, 22)
                             .addComponent(otherPower, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(130, 130, 130)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addComponent(otherPw2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(380, 380, 380)
                             .addComponent(nextButton)))
@@ -153,19 +112,11 @@ public class Powers extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(power, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(otherPw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
+                    .addGap(58, 58, 58)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(otherPower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(otherPw2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(28, 28, 28)
+                    .addGap(68, 68, 68)
                     .addComponent(nextButton)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
@@ -182,6 +133,10 @@ public class Powers extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         WindowsManager.closeCurrentAndShowPrevious();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void powerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_powerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -222,13 +177,9 @@ public class Powers extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JButton nextButton;
     private javax.swing.JComboBox<String> otherPower;
-    private javax.swing.JTextField otherPw;
-    private javax.swing.JTextField otherPw2;
     private javax.swing.JComboBox<String> power;
     // End of variables declaration//GEN-END:variables
 }
