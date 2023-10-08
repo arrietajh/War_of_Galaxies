@@ -14,14 +14,7 @@ public class War_of_Galaxies {
     {
         System.out.println("Hello World!");
         
-        /*TO DO 
-    
-    -Add BattleSimulation Class
-    -Add StatisticsManager Class?
-    -Add Main Class stuff
-    
-    
-    */
+    //TO DO. Discuss some front end changes. Enlist -> Army. Add options to view the arrays in EnlistmentManager.
         
     }
 }

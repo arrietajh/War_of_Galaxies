@@ -23,6 +23,14 @@ public class SquadManager {
         squads.add(squad);
     }
 
+    public List<Squad> getSquads() {
+        return squads;
+    }
+
+    public void setSquads(List<Squad> squads) {
+        this.squads = squads;
+    }
+
     public boolean isEligible(Squad squad) {
         // Check squad eligibility based on criteria
         // (number of soldiers, soldier types, etc.)

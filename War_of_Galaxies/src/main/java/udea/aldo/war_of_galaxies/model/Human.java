@@ -8,16 +8,15 @@ package udea.aldo.war_of_galaxies.model;
  *
  * @author aldo.camera
  */
-public class Human 
-{
+public class Human {
+
     private String name;
     private int id;
     private int age;
     private int numberOfChildren;
     private String maritalStatus;
     private String address;
-    
-    
+
     public Human(int id, int age, int numberOfChildren, String name, String address, String maritalStatus) {
         this.id = id;
         this.age = age;
@@ -25,10 +24,9 @@ public class Human
         this.name = name;
         this.address = address;
         this.maritalStatus = maritalStatus;
-        
+
     }
 
-    
     public int getId() {
         return id;
     }
@@ -82,7 +80,4 @@ public class Human
         return "Human{" + "name=" + name + ", id=" + id + ", age=" + age + ", numberOfChildren=" + numberOfChildren + ", maritalStatus=" + maritalStatus + ", address=" + address + '}';
     }
 
-   
-    
-    
 }

@@ -8,13 +8,12 @@ package udea.aldo.war_of_galaxies.model;
  *
  * @author aldo.camera
  */
-public class Soldier 
-{
+public class Soldier {
+
     private Superhuman superhuman;
     private Alfi alfi;
     private int health, attack, defense, specialAttack, specialDefense, speed, wisdom;
 
-    
     // Constructor Superhumano
     public Soldier(Superhuman superhuman, int health, int attack, int defense, int specialAttack, int specialDefense, int speed, int wisdom) {
         this.superhuman = superhuman;
@@ -26,8 +25,7 @@ public class Soldier
         this.speed = speed;
         this.wisdom = wisdom;
     }
-    
-    
+
     //Constructor Alfi
     public Soldier(Alfi alfi, int health, int attack, int defense, int specialAttack, int specialDefense, int speed, int wisdom) {
         this.alfi = alfi;
@@ -54,6 +52,15 @@ public class Soldier
 
     public void setAlfi(Alfi alfi) {
         this.alfi = alfi;
+    }
+
+    public String getName() {
+        if (superhuman != null) {
+            return superhuman.getName();
+        } else if (alfi != null) {
+            return alfi.getName();
+        }
+        return "Unknown Soldier";
     }
 
     public int getHealth() {
@@ -111,8 +118,19 @@ public class Soldier
     public void setWisdom(int wisdom) {
         this.wisdom = wisdom;
     }
-    
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "Soldier{"
+                + "name='" + (superhuman != null ? superhuman.getName() : alfi.getName()) + '\''
+                + ", health=" + health
+                + ", attack=" + attack
+                + ", defense=" + defense
+                + ", specialAttack=" + specialAttack
+                + ", specialDefense=" + specialDefense
+                + ", speed=" + speed
+                + ", wisdom=" + wisdom
+                + '}';
+    }
+
 }

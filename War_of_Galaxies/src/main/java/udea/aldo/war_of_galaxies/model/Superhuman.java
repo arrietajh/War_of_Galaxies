@@ -55,6 +55,7 @@ public class Superhuman extends Human
                 "name='" + getName() + '\'' +
                 ", age=" + getAge() +
                 ", id=" + getId() +
+                ", evilScore=" + getEvilScore() +
                 ", numberOfChildren=" + getNumberOfChildren() +
                 ", maritalStatus='" + getMaritalStatus() + '\'' +
                 ", address='" + getAddress() + '\'' +
