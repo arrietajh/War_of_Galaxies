@@ -4,6 +4,8 @@
  */
 package udea.aldo.war_of_galaxies.view;
 
+import java.awt.BorderLayout;
+
 /**
  *
  * @author Jhomar_Arrieta
@@ -15,6 +17,8 @@ public class View extends javax.swing.JFrame {
      */
     public View() {
         initComponents();
+        
+        WindowsManager.setMainFrame(this);
     }
 
     /**
@@ -41,8 +45,18 @@ public class View extends javax.swing.JFrame {
         });
 
         squadButton.setText("Escuadrones");
+        squadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                squadButtonActionPerformed(evt);
+            }
+        });
 
         fightButton.setText("Luchar!");
+        fightButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fightButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
@@ -60,6 +74,7 @@ public class View extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,7 +101,22 @@ public class View extends javax.swing.JFrame {
 
     private void enlistButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enlistButtonActionPerformed
         
+        EnlistForm enlistForm = new EnlistForm();
+        enlistForm.setVisible(true);
+        WindowsManager.addWindow(enlistForm);
     }//GEN-LAST:event_enlistButtonActionPerformed
+
+    private void squadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_squadButtonActionPerformed
+        SquadForm squadForm = new SquadForm();
+        squadForm.setVisible(true);
+        WindowsManager.addWindow(squadForm);
+    }//GEN-LAST:event_squadButtonActionPerformed
+
+    private void fightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fightButtonActionPerformed
+        FightForm fightForm = new FightForm();
+        fightForm.setVisible(true);
+        WindowsManager.addWindow(fightForm);
+    }//GEN-LAST:event_fightButtonActionPerformed
 
     /**
      * @param args the command line arguments
